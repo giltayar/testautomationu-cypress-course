@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/giltayar/testautomationu-cypress-course#readme",
   "devDependencies": {
-    "cypress": "^3.1.4"
+    "cypress": "^3.4.1"
+  },
+  "dependencies": {
+    "@applitools/eyes-cypress": "^3.6.48"
   }
 }
