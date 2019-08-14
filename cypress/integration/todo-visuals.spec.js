@@ -2,7 +2,7 @@
 import * as todoPage from '../page-objects/todo-page'
 
 describe('visual validation', () => {
-  before(() =>  cy.visit('http://todomvc-app-for-testing.surge.sh/?different-title-color'))
+  before(() =>  todoPage.navigate())
 
   beforeEach(() =>
     cy.eyesOpen({
