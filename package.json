@@ -19,10 +19,10 @@
     "url": "https://github.com/giltayar/testautomationu-cypress-course/issues"
   },
   "homepage": "https://github.com/giltayar/testautomationu-cypress-course#readme",
-  "devDependencies": {
-    "cypress": "^12.17.2"
-  },
   "dependencies": {
     "@applitools/eyes-cypress": "^3.6.48"
+  },
+  "devDependencies": {
+    "cypress": "^3.8.3"
   }
 }
