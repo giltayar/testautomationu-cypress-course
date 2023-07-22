@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
 
-it("should navigate to the TodoMVC App", () => {
+it("should be able to add new element to the list", () => {
     cy.visit('https://todomvc-app-for-testing.surge.sh')
 })
