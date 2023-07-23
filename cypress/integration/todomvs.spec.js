@@ -1,33 +1,40 @@
 /// <reference types="cypress" />
-import {TodoPage} from '../page-objects/todo-page'
+import {
+  navigate,
+  addTodo,
+  validateTodoText,
+  toggleTodo,
+  clearCompleted,
+  validateTodoCompletedState,
+  validateToggleState,
+  validateNumberOfTodosShown,
+} from '../page-objects/todo-page'
 
 describe('todo actions', () => {
-  const todoPage = new TodoPage()
-
   beforeEach(() => {
-    todoPage.navigate()
+    navigate()
 
-    todoPage.addTodo('Clean room')
+    addTodo('Clean room')
   })
 
   it('should add a new todo to the list', () => {
-    todoPage.validateTodoText(0, 'Clean room')
+    validateTodoText(0, 'Clean room')
 
-    todoPage.validateToggleState(0, false)
+    validateToggleState(0, false)
   })
 
   describe('toggling todos', () => {
     it('should toggle test correctly', () => {
-      todoPage.toggleTodo(0)
-      todoPage.validateTodoCompletedState(0, true)
+      toggleTodo(0)
+      validateTodoCompletedState(0, true)
     })
 
     it('should clear completed', () => {
-      todoPage.toggleTodo(0)
+      toggleTodo(0)
 
-      todoPage.clearCompleted()
+      clearCompleted()
 
-      todoPage.validateNumberOfTodosShown(0)
+      validateNumberOfTodosShown(0)
     })
   })
 })
