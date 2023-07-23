@@ -8,7 +8,12 @@ describe('visual validation', () => {
     cy.eyesOpen({
       appName: 'TUA  TodoMVC',
       batchName: 'TAU TodoMVC Hey! Khadar did it',
-      
+      browser: [
+        {name: 'chrome', width: 1024, height: 768},
+        {name: 'chrome', width: 800, height: 600},
+        {name: 'firefox', width: 1024, height: 768},
+        {deviceName: 'iphone x'},
+      ],
     }),
   )
   afterEach(() => cy.eyesClose())
